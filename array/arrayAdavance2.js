@@ -69,8 +69,6 @@ function Remove(nums) {
     }
     return j
 };
-*/
-
 //Merge Two Sorted Array
 let arr1 = [2, 5, 6]
 let arr2 = [1, 3, 4, 8]
@@ -90,5 +88,27 @@ while (i < arr1.length) {
   merge[k++] = arr1[i++];
 }
 console.log(merge)
+*/
 
-
+// 88. Merge Sorted Array
+function twoArray(nums1, m, nums2, n) {
+    let merge=[]
+    let i=j=k=0
+    while(i<m&&j<n){
+        if(nums1[i]<nums2[j]){
+            merge[k++]=nums1[i++]
+        }else{
+            merge[k++]=nums2[j++]
+        }
+    }
+    while(j<n){
+        merge[k++]=nums2[j++]
+    }
+    while(i<m){
+        merge[k++]=nums1[i++]
+    }
+    for(let i=0;i<merge.length;i++){
+        nums1[i]=merge[i]
+    }
+    return
+};
