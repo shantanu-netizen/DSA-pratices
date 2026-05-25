@@ -95,5 +95,5 @@ function binary(ar, tar, start, end) {
     return -1
 }
 let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-let tar = 11
+let tar = 6
 console.log(binary(ar,tar,0,ar.length-1))
