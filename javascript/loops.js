@@ -14,12 +14,23 @@ let obj={
 for (let a in obj) {
     console.log("marks of " +a+ " are " +obj[a] )
 }
-    */
-const prompt = require("prompt-sync")();
+    const prompt = require("prompt-sync")();
 let n = prompt("Enter your n: ");
 n = Number.parseInt(n);
 let i = 10;
 do {
   console.log(i);
   i++;
-} while (i < n)
+} while (i < n);
+    */
+
+
+let obj = {
+  harry: 1,
+  golu: 4,
+  shan: 2,
+  for: 5,
+};
+for (let a in obj) {
+  console.log("marks of " + a + " are " + obj[a]);
+}

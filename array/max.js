@@ -14,7 +14,7 @@ console.log(min)
 */
 /*
 function heavyweight(weights) {
-    maxWeight = weights[0]
+   let maxWeight = weights[0]
     for (i = 1; i < weights.length; i++){
         if (weights[i] > maxWeight) {
             maxWeight=weights[i]

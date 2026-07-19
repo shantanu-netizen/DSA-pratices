@@ -1,13 +1,8 @@
 let a = "golu"
-let b = "shantanu"
 {
   let a = "ankit";
   console.log(a); //ankit
 }
 console.log(a)//golu
+console.log(c)
 var c = "golu"
-{
-  var c = "shantanu";
-  console.log(c); //shantanu
-}
-console.log(c);//shantanu
