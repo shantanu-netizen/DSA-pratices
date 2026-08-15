@@ -73,3 +73,27 @@ var thirdMax = function(nums) {
 
     return third === -Infinity ? first : third;
 };
+
+// 977. Squares of a Sorted Array
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function(nums) {
+    let n=nums.length
+    let res=new Array(n)
+    let left=0
+    let right=n-1
+    let k=n-1
+    while(left<=right){
+        if(Math.abs(nums[left])<Math.abs(nums[right])){
+           res[k]=nums[right]*nums[right]
+           right--
+        }else{
+             res[k]=nums[left]*nums[left]
+             left++
+        }
+        k--
+    }
+    return res
+};
