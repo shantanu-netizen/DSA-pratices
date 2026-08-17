@@ -76,3 +76,42 @@ var romanToInt = function(s) {
     }
     return res
 };
+//541. Reverse String II
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var reverseStr = function(s, k) {
+    let arr=s.split("")
+    for(let i=0;i<s.length;i+=2+k){
+        let left=i
+        let right=Math.min(i+k,s.length)-1
+        while(left<right){
+            let temp=arr[left]
+            arr[left]=arr[right]
+            arr[right]=temp
+            left++
+            right--
+        }
+    }
+    return arr.join("")
+};
+
+//14. Longest Common Prefix
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    let pre = strs[0];
+
+    for (let i = 1; i < strs.length; i++) {
+        while (pre !== "" && !strs[i].startsWith(pre)) {
+            pre = pre.substring(0, pre.length - 1);
+        }
+    }
+
+    return pre;
+};
+//387. First Unique Character in a String
