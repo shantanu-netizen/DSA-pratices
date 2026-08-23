@@ -52,3 +52,48 @@ function subcount(nums, goal) {
 
     return ns;
 }
+//2958. Length of Longest Subarray With at Most K Frequency
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var maxSubarrayLength = function(nums, k) {
+    let map=new Map()
+    let start=0
+    let maxSize=0
+    for(let end=0;end<nums.length;end++){
+        map.set(nums[end],(map.get(nums[end])||0)+1)
+            while(map.get(nums[end])>k){
+        map.set(nums[start],map.get(nums[start])-1)
+        start++
+    }
+    maxSize=Math.max(maxSize,end-start+1)
+    }
+    return maxSize
+};
+//3. Longest Substring Without Repeating Characters
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+        let map = new Map();
+        let start = 0;
+        let maxSize = 0;
+
+        for (let end = 0; end < s.length; end++) {
+
+            while ((map.get(s[end]) || 0) === 1) {
+                map.set(s[start], 0);
+                start++;
+            }
+
+            map.set(s[end], 1);
+
+            maxSize = Math.max(maxSize, end - start + 1);
+        }
+
+        return maxSize;
+    }
+
