@@ -114,4 +114,40 @@ var longestCommonPrefix = function(strs) {
 
     return pre;
 };
-//387. First Unique Character in a String
+//1662. Check If Two String Arrays are Equivalent
+/**
+ * @param {string[]} word1
+ * @param {string[]} word2
+ * @return {boolean}
+ */
+var arrayStringsAreEqual = function(word1, word2) {
+   if(word1.join("")===word2.join("")){
+    return true
+   }else{
+    return false
+   }
+};
+//520. Detect Capital
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+var detectCapitalUse = function(word) {
+     let count = 0;
+
+    for (let i = 0; i < word.length; i++) {
+        if (word[i] >= 'A' && word[i] <= 'Z') {
+            count++;
+        }
+    }
+
+    if (count === 0 || count === word.length) {
+        return true;
+    }
+
+    if (count === 1 && word[0] >= 'A' && word[0] <= 'Z') {
+        return true;
+    }
+
+    return false;
+};
