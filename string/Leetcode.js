@@ -151,3 +151,26 @@ var detectCapitalUse = function(word) {
 
     return false;
 };
+//345. Reverse Vowels of a String
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseVowels = function(s) {
+    let arr=s.split("")
+    let left=0
+    let right=arr.length-1
+    let v="aeiouAEIOU"
+    while(left<right){
+ while(left<right&&!v.includes(arr[left])){
+        left++
+    }
+    while(left<right&&!v.includes(arr[right])){
+        right--
+    }
+    [arr[left],arr[right]]=[arr[right],arr[left]]
+    left++
+    right--
+    }
+   return arr.join("")
+};
